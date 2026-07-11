@@ -1,0 +1,20 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate action.yml
+        run: |
+          if ! grep -q "name:" action.yml; then
+            echo "::error::action.yml is missing required fields"
+            exit 1
+          fi
+          echo "action.yml is valid"
