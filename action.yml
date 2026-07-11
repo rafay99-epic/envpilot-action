@@ -1,5 +1,5 @@
 name: "Envpilot"
-description: "Fetch environment variables from Envpilot directly into your CI pipeline — no more copy-pasting secrets into GitHub."
+description: "Pull environment variables from envpilot.dev into your workflow"
 author: "envpilot.dev"
 
 branding:
